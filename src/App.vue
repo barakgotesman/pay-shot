@@ -17,7 +17,7 @@
     </div>
 
     <AddDrinkForm :addDrink="addDrink" />
-    <div v-for="(item, index) in state.items" :key="index">
+    <div v-for="(item, index) in sortedList" :key="index">
       <AddDrink :drink="item" :addCostFn="addCost" />
     </div>
   </div>
@@ -45,6 +45,7 @@ export default {
     // add new drink to your array
     const addDrink =(newDrink) =>{
             const drink = state.items.find((d) => d.label == newDrink.label);
+            if(newDrink.label=="") return;
             if(drink)
             {
               alert("already in our database")
@@ -80,23 +81,5 @@ export default {
 body {
   background: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
   background-size: cover;
-}
-
-.list-move, /* apply transition to moving elements */
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
-.list-leave-active {
-  position: absolute;
 }
 </style>

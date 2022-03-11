@@ -13,7 +13,7 @@
     </div>
 
     <div class="col">
-      <label :for="label" class="form-label">price:</label>
+      <label :for="drink.label" class="form-label">price:</label>
       <div class="row g-3 align-items-center mb-3">
         <div class="col-auto">
         <span v-if="!editMode"> {{ drink.price}} </span>
