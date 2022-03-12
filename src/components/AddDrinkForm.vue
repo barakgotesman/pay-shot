@@ -22,10 +22,11 @@
           <div class="row align-items-center">
             <div class="col-auto">
               <label for="dSelect" class="form-label">Type</label>
-              <select class="form-select" v-model="newDrink.type">
-                <option value="beer">Beer</option>
-                <option value="cocktail">cocktail</option>
-                <option value="shot">shot</option>
+              <select class="form-select" v-model="newDrink.class">
+                <option value="fa-beer-mug-empty">Beer</option>
+                <option value="fa-martini-glass">cocktail</option>
+                <option value="fa-whiskey-glass">shot</option>
+                <option value="fa-cake-candles">Dessert</option>
               </select>
             </div>
             <div class="col-auto">

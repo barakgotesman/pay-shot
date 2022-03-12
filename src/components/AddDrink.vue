@@ -2,17 +2,19 @@
 <section class="menu bg-danger text-white" :class="{'bg-gradient p-0 border' : editMode }">
 <div class="container ">
   <div class="row p-2 e">
-    <div class="col-3  position-relative text-center align-self-center mb-2 image-col">
-<i class="fa-regular fa-pen-to-square position-absolute bottom-0 start-0" @click="toggleEditMode"></i>
+    <div class="col-3  text-center align-self-center mb-2 image-col">
 
       <span class="fw-bold mb-2 d-block" v-if="!editMode">{{ drink.label }} </span>
       <input type="text" class="form-control form-control-sm" v-else
       v-model="drink.label" :value=drink.label>
       <i class="fa-solid fa-4x" :class="drink.class"></i>
-      {{ drink.amount }}
+      <span class="amount d-block bg-light rounded-pill text-dark fw-bold mt-2">{{ drink.amount }}</span>
     </div>
 
-    <div class="col">
+    <div class="col position-relative">
+
+    <i class="fa-regular fa-pen-to-square position-absolute end-0 top-0" @click="toggleEditMode"></i>
+
       <label :for="drink.label" class="form-label">price:</label>
       <div class="row g-3 align-items-center mb-3">
         <div class="col-auto">

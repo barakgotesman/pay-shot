@@ -59,7 +59,7 @@ export default {
             state.items.push({
               label: newDrink.label,
               price: newDrink.price,
-              class: '',
+              class: newDrink.class,
               amount: 0
             })
     },
