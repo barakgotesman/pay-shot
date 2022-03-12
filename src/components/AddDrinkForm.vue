@@ -24,9 +24,10 @@
               <label for="dSelect" class="form-label">Type</label>
               <select class="form-select" v-model="newDrink.class">
                 <option value="fa-beer-mug-empty">Beer</option>
-                <option value="fa-martini-glass">cocktail</option>
-                <option value="fa-whiskey-glass">shot</option>
+                <option value="fa-martini-glass">Cocktail</option>
+                <option value="fa-whiskey-glass">Shot</option>
                 <option value="fa-cake-candles">Dessert</option>
+                <option value="fa-wine-glass-empty">Wine</option>
               </select>
             </div>
             <div class="col-auto">
