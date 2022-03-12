@@ -21,17 +21,21 @@
       <AddDrink :drink="item" :addCostFn="addCost" />
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
 import { watch,toRefs, reactive, computed, ref, unref } from 'vue';
 import AddDrink from './components/AddDrink.vue';
 import AddDrinkForm from './components/AddDrinkForm.vue';
+import Footer from './components/layout/Footer.vue';
+
 export default {
   name: 'App',
   components: {
     AddDrink,
     AddDrinkForm,
+    Footer
   },
   setup() {
     const state = reactive({

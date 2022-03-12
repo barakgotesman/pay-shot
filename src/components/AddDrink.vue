@@ -1,7 +1,7 @@
 <template>
 <section class="menu bg-danger text-white" :class="{'bg-gradient p-0 border' : editMode }">
 <div class="container ">
-  <div class="row p-2">
+  <div class="row p-2 e">
     <div class="col-3  position-relative text-center align-self-center mb-2 image-col">
 <i class="fa-regular fa-pen-to-square position-absolute bottom-0 start-0" @click="toggleEditMode"></i>
 
